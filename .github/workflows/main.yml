@@ -11,7 +11,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-        repository: master
+        ref: master
     - name: Setup JDK
       uses: actions/setup-java@v3.6.0
       with:

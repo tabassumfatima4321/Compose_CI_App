@@ -8,18 +8,21 @@ jobs:
   build:
     runs-on: ubuntu-latest 
     steps:
-      -name: Checkout
+    - name: Checkout
       uses: actions/checkout@v2.5.0
-      
-      -name: Setup JDK
+    - name: Setup JDK
       uses: actions/setup-java@v3.6.0
       with:
         java-version: 11.0.6
-      -name: Build with Gradle
+    - name: Build with Gradle
       run: ./gradlew build
-      -name: Upload APK
+    - name: Upload APK
       uses: actions/upload-artifact@3.1.1
       with:
         name: app
         path: app/build/output/apk/debug/app-debug.apk
+        
+        
+      
+
        
